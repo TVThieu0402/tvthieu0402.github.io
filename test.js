@@ -1,6 +1,4 @@
 
-<script src="/Users/tuyen.thieu/Documents/GitHub/tvthieu0402.github.io/KalturaFullClient.min.js"></script>
-
 <script>
   var config = new KalturaConfiguration(2162381);
   config.serviceUrl = 'https://www.kaltura.com';
