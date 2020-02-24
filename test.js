@@ -1,5 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="KalturaFullClient.js"></script>
+<script src="https://github.com/TVThieu0402/tvthieu0402.github.io/blob/master/KalturaFullClient.js"></script>
 
 <script>
   var config = new KalturaConfiguration(2162381);
