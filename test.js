@@ -20,14 +20,12 @@
       console.log('Error starting session', success, ks);
     } else {
       client.setKs(ks);
-      var reportType = "5" /* KalturaReportType.TOP_CONTRIBUTORS */;
-      var reportInputFilter = {objectType: "KalturaReportInputFilter"};
+      var filter = {objectType: "KalturaMediaEntryFilter"};
+      filter.orderBy = "+createdAt" /* KalturaMediaEntryOrderBy.CREATED_AT_ASC */;
+      filter.freeText = "otube";
       var pager = {objectType: "KalturaFilterPager"};
-      var order = "";
-      var objectIds = "";
-      var responseOptions = {objectType: "KalturaReportResponseOptions"};
 
-      KalturaReportService.getTable(reportType, reportInputFilter, pager, order, objectIds, responseOptions)
+      KalturaMediaService.listAction(filter, pager)
         .execute(client, function(success, results) {
           if (!success || (results && results.code && results.message)) {
             console.log('Kaltura Error', success, results);
